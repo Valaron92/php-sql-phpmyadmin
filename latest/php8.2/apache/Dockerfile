@@ -157,6 +157,8 @@ RUN set -eux; \
 	done; \
 	chown -R www-data:www-data wp-content; \
 	chmod -R 1777 wp-content
+ 	rm wp-admin
+  	rm wp-content
 
 VOLUME /var/www/html
 
