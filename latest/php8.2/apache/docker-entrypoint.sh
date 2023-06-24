@@ -53,7 +53,6 @@ if [[ "$1" == apache2* ]] || [ "$1" = 'php-fpm' ]; then
 		# https://github.com/docker-library/wordpress/issues/506 ("wp-content" persisted, "akismet" updated, WordPress container restarted/recreated, "akismet" downgraded)
 		for contentPath in \
 			/usr/src/wordpress/.htaccess \
-			/usr/src/wordpress/wp-content/*/*/ \
 		; do
 			contentPath="${contentPath%/}"
 			[ -e "$contentPath" ] || continue
